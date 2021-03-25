@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Project1_DBrooks_Python", "Project1_DBrooks_Python.pyproj", "{77075F30-50E4-4C04-BE8B-2A4046F9A759}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77075F30-50E4-4C04-BE8B-2A4046F9A759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77075F30-50E4-4C04-BE8B-2A4046F9A759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B39E6294-BEA9-4B51-ABCE-BBE1F7889759}
+	EndGlobalSection
+EndGlobal
