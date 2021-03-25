@@ -1,3 +1,2 @@
-# Structure of Programming Lanmguages Project
-By David Brooks : A demonstration of two multiple paradigm languages (C++ and Python3)
-
+# SoPL_Project
+By David Brooks : A project for Structure of Programming Languages class
