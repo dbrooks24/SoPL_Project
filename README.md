@@ -1,5 +1,5 @@
 # Structure of Programming Languages Project
-By David Brooks : A demonstration of two multiple paradigm languages (C++ and Python3)
+By David Brooks : A demonstration of two multiple paradigm languages (C++ and Python 3.7)
 
    ### What does the program do?
    Ask for a comma spepterated list of words and determines which ones supplied are palindromes or not. 

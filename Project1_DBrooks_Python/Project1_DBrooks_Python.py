@@ -17,25 +17,31 @@ def welcome_init()->list:
     UsersList = input("please enter in a list of comma seperated words... ->").split(',') 
 
     
-    usr_Acknowledgement = input("just to confirm you typed: \"" + Utilities.list_to_string(UsersList," , ") + "\" is this correct? [y/n]->")
-
+    usr_Acknowledgement = input("\n --? just to confirm you typed: \"" + Utilities.list_to_string(UsersList," , ") + "\" is this correct? [y/n]->")
+    print('\n')
     if usr_Acknowledgement == "y":
         print("Thank you for informing me I got it right, continuing with program...")
         return UsersList
     else:
         print("Oh no! lets try that again...")
-        welcome_init()
+        return welcome_init()
 
 
 
 
 List_of_Users_words = welcome_init()
 
+#below lines were used for debugging recursion issue:
+    #print(" ----- Current list of words: ",end='')
+    #print(List_of_Users_words)
+    #input("...pause")
+
 palindrom_Obj = PalindromeClass.palindrome(List_of_Users_words)
 palindrom_Obj.evaluate_WordsSubmitted()
 
-print("...the results are in!")
-print("\nThe words that are palindromes are: ", end='') #dont print a newline
-print(Utilities.list_to_string(palindrom_Obj.Words_that_are_Palindromes," , "))
+print("\n...the results are in!")
+print("\n ----->>   The words that are palindromes are: {", end='') #dont print a newline
+print(Utilities.list_to_string(palindrom_Obj.Words_that_are_Palindromes," | "), end='') #dont print a newline
+print("}   <<-----")
 
 print("\n\n------>> Thank you for using my program! stay safe! <<------")
