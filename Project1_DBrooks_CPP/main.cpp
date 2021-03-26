@@ -18,6 +18,7 @@ int main()
 		std::cout << std::endl << std::endl;
 		std::cout << "------Words that are palindromes-------" << std::endl;
 		std::cout << palindromeObj;
+		std::cout << "\n---------------------------------------" << std::endl;
 
 
 		delete palindromeObj;
@@ -30,8 +31,10 @@ int main()
 			return 0;
 		}
 
-		while (command != 'r' && command != 'e')
+		int WrongInput_cntr = 0;
+		while (command != 'r' && command != 'e' && WrongInput_cntr < 5)
 		{
+			++WrongInput_cntr;
 			std::cout << "~~> ERROR, invalid command. [ e:=\"exit\" and r:=\"re-run\"]";
 			std::cout << "repsonse... ->";
 			std::cin >> command;

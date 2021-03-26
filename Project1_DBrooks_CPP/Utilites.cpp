@@ -60,9 +60,9 @@ void Palindrome::InitiateList(std::vector<std::string>* PassedVector)
 	{
 		if (i == '\0' || i == ',') // either end of list OR a comma has been read -> end of word
 		{
-			std::cout << "i == " << i << std::endl;
+			//std::cout << "i == " << i << std::endl;
 			PassedVector->push_back(Word);
-			std::cout << "the word \"" << Word << "\" has successfully been entered for evaluation" << std::endl;
+			//std::cout << "the word \"" << Word << "\" has successfully been entered for evaluation" << std::endl;
 			Word = "";
 		}
 		else
