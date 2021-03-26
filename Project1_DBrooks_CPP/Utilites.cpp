@@ -50,16 +50,19 @@ void Palindrome::InitiateList(std::vector<std::string>* PassedVector)
 	std::stringstream ss;
 	std::string Word;
 
-	std::cout << "enter a comma seperated list of words you like to be evaluated:" << std::endl;
+	std::cout << "~~> Enter a comma seperated list of words you like to be evaluated:";
 	std::cin >> inputedSeries;
 	ss << inputedSeries;
+	ss << '\0'; // re-add null term char
+
 
 	for (char i; ss >> i;)
 	{
-		if (i == 0 || i == ',') // either end of list OR a comma has been read -> end of word
+		if (i == '\0' || i == ',') // either end of list OR a comma has been read -> end of word
 		{
+			std::cout << "i == " << i << std::endl;
 			PassedVector->push_back(Word);
-			std::cout << "\tthe word \"" << Word << "\" has successfully been entered for evaluation" << std::endl;
+			std::cout << "the word \"" << Word << "\" has successfully been entered for evaluation" << std::endl;
 			Word = "";
 		}
 		else
@@ -77,7 +80,7 @@ void Palindrome::InitiateList(std::vector<std::string>* PassedVector)
 
 std::ostream& operator<<(std::ostream& os, const Palindrome* obj)
 {
-	std::cout << "The words you entered that are palindromes are:" << std::endl;
+	std::cout << "The words you entered that are palindromes are:";
 	
 	if (obj->palindromeWords->size() == 0)
 	{

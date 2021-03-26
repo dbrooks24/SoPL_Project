@@ -11,7 +11,7 @@ import Utilities
 
 #below is a function used for generating and returning a list of words that the user entered
 def welcome_init()->list: 
-    welcomeString = "Welcome to David Brooks's Project! (Object Oriented Python 3)"
+    welcomeString = "Welcome to David Brooks's Project! (Object Oriented Python 3x)"
     print(welcomeString)
     #ask the user to enter a comma seperated list. This string is then split using the split function.
     UsersList = input("please enter in a list of comma seperated words... ->").split(',') 
