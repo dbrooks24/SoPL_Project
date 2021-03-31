@@ -6,7 +6,14 @@ By David Brooks : A demonstration of two multiple paradigm languages (C++ and Py
    
    
    ## How to run it?
-   **----- TODO! -----**
+   The source code used for running the program is located in the **Exacutables directory**.
+   ### C++ Verson:
+   Since the compiled program is operating system dependent, please download the one that corresponds to your system <br> `exe := Windows-x64` and `bin := Unix`. Depending on your security preferences, you may have to allow the program to run as it is not signed by any centural authority.<br></br>
+   
+   ### Python 3 version:
+   Due to the nature of Python and how it uses a interperator to function, you will need to intall the latest version of Python for your operating system. All the modules are zipped in the `Python.7z` file. This file is a zip file that requires the 7zip application, which can be installed [here](https://www.7-zip.org/). After download simply open a termanal or command line at the directory location or unzipped the file to. Then emter `python ./Main_Python.py` 
+   
+   
    
    ### How does it do it?
    Both versions will ask the user for input, store the input into a string and convert it into a vector or list container. This is then used to create a defined palindrome object. Each object has its own methods that determines if each word in the passed container is evaluated and used to determine its palindrome status. If it is a palindrome, it will be appeneded to a container that stores all positive palindromes. 
