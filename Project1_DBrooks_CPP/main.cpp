@@ -7,8 +7,8 @@
 
 int main()
 {
-	char command = 'r'; // r = run
-	while (command == 'r')
+	std::string command = "r"; // r = run
+	while (command == "r")
 	{
 		std::cout << "\n Welcome to David Brooks's Project! (Object Oriented C++)" << std::endl;
 
@@ -25,19 +25,17 @@ int main()
 
 		std::cout << "~~> What would you like to do? [ e:=\"exit\" and r:=\"re-run\"]->";
 		std::cin >> command;
-		if (command == 'e')
+
+		if (command == "e")
 		{
 			std::cout << "\tterminating gracefully... thank you and stay safe!\n" << std::endl;
 			return 0;
 		}
 
-		int WrongInput_cntr = 0;
-		while (command != 'r' && command != 'e' && WrongInput_cntr < 5)
+		// if we are here, then the user typed in a char other then "e" or "r"
+		while (command != "r")
 		{
-			++WrongInput_cntr;
-			std::cout << "~~> ERROR, invalid command. [ e:=\"exit\" and r:=\"re-run\"]";
-			std::cout << "repsonse... ->";
-			std::cin >> command;
+			command = WrongCommandInput(command);
 		}
 
 	}

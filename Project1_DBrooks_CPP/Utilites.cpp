@@ -80,7 +80,7 @@ void Palindrome::InitiateList(std::vector<std::string>* PassedVector)
 
 std::ostream& operator<<(std::ostream& os, const Palindrome* obj)
 {
-	std::cout << "The words you entered that are palindromes are:";
+	std::cout << "The words you entered that are palindromes are:\n";
 	
 	if (obj->palindromeWords->size() == 0)
 	{
@@ -93,4 +93,32 @@ std::ostream& operator<<(std::ostream& os, const Palindrome* obj)
 	}
 
 	return os;
+}
+
+
+
+//helper functions:
+std::string WrongCommandInput(std::string commandPassed)
+{
+	if (commandPassed.length() != 1)
+	{
+		std::cout << "~~> ERROR, Expected 1 character as input...";
+		commandPassed = "";
+	}
+
+	std::cout << "~~> ERROR, invalid command. [ e:=\"exit\" and r:=\"re-run\"]";
+	std::cout << "repsonse... ->";
+	std::cin >> commandPassed;
+
+	if (commandPassed == "e")
+	{
+		std::cout << "\tterminating gracefully... thank you and stay safe!\n" << std::endl;
+		exit(0);
+	}
+
+	// user did not enter an "e", therefor they entered another invalid character or an r...
+	else
+	{
+		return commandPassed;
+	}
 }

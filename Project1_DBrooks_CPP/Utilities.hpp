@@ -30,6 +30,8 @@ private:
 
 
 
+//helper functions:
+std::string WrongCommandInput(std::string commandPassed);
 
 
 
