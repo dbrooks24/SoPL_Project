@@ -11,7 +11,7 @@ import Utilities
 
 #below is a function used for generating and returning a list of words that the user entered
 def welcome_init()->list: 
-    welcomeString = "Welcome to David Brooks's Project! (Object Oriented Python 3x)"
+    welcomeString = "Welcome to David Brooks's Project! (Object Oriented Python 3.x)"
     print(welcomeString)
     #ask the user to enter a comma seperated list. This string is then split using the split function.
     UsersList = input("please enter in a list of comma seperated words... ->").split(',') 
@@ -22,14 +22,26 @@ def welcome_init()->list:
     if usr_Acknowledgement == "y":
         print("Thank you for informing me I got it right, continuing with program...")
         return UsersList
+    
+    elif len(usr_Acknowledgement) != 1: #if user types in more then one char as response, dont loop commands.
+        print("INVALID entry, expected a single char as input [y/n]....\n")
+        return welcome_init()
+
     else:
-        print("Oh no! lets try that again...")
+        print("Sorry I got that wrong! Lets try that again...")
         return welcome_init()
 
 
 
 
 List_of_Users_words = welcome_init()
+
+# if there are no items in the list after above function call, an error has occured!
+if len(List_of_Users_words) == 0:
+    print("ERROR, no items were added to list of words. Terminating...")
+    exit()
+
+
 
 #below lines were used for debugging recursion issue:
     #print(" ----- Current list of words: ",end='')
